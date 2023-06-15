@@ -1,0 +1,19 @@
+<p>Employee Details</p>
+<table>
+    <thead> 
+        <tr>
+        <th>id</th>
+        <th>EmpName</th>
+        <th>empAddress</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngIf="value.length">
+            <td>{{value[0].id}}</td>
+            <td>{{value[0].EmpName}}</td>
+            <td>{{value[0].empAddress}}</td>
+        </tr>
+        <button (click)="getAllUsers()" value="back">Back</button>
+    </tbody>
+    
+</table>

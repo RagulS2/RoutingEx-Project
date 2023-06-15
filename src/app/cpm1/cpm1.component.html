@@ -1,0 +1,27 @@
+<table>
+    <thead>
+        <tr>
+        <th>id</th>
+        <th>companyName</th>
+        <th>address</th>
+        <th>no-of-Employees</th>
+        <!-- <th>location</th> -->
+        <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody id="tableBody" >
+        <tr  *ngFor="let e of services">
+            <td>{{e.id}}</td>
+            <td>{{e.cName}}</td>
+            <td>{{e.address}}</td>
+            <td>{{e.noe}}</td>
+            <!-- <td>{{e.location}}</td> -->
+            <td><button (click)="deleteUser(e.id)">delete</button>
+                <button (click)="show(e.id)">Show</button>
+            </td>
+        </tr>
+        <a routerLink="/company/id"><button>create new</button></a>
+    </tbody>
+</table>
+
+  

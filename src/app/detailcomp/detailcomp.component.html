@@ -1,0 +1,51 @@
+<!-- <p>CompanyAddress</p>
+<ul *ngIf="val.length">
+    <li>CompanyName :{{val[0].cName}}</li>
+    <li>CompanyAddress :{{val[0].address}}</li>
+    <li>No-of-Employees :{{val[0].noe}}</li>
+    <li>Location :{{val[0].location}}</li>
+</ul> -->
+<div class="card">
+    <div class="card-header">Company Details</div>
+    <div class="card-body">
+      <ul *ngIf="val.length">
+        <li>CompanyName: {{val[0].cName}}</li>
+        <li>CompanyAddress: {{val[0].address}}</li>
+        <li>No-of-Employees: {{val[0].noe}}</li>
+        <li>Location: {{val[0].location}}</li>
+      </ul>
+    </div>
+    <button (click)="getBack()">back</button>
+  </div>
+  <form >
+    <label for="companyName">Company Name:</label>
+    <input type="text" id="companyName" [(ngModel)]="body.cName" name="companyName"> <br>
+    
+    <label for="address">Address:</label>
+    <textarea id="address" name="address" [(ngModel)]="body.address" required></textarea> <br>
+    
+    <label for="numEmployees">Number of Employees:</label>
+    <input type="number" id="numEmployees" [(ngModel)]="body.noe" name="numEmployees"  ><br>
+    <label for="companyLocation">Company Location:</label>
+    <input type="text" id="companyLocation" [(ngModel)]="body.location" name="companyLocation"> <br>
+    <input type="submit" (click)="createUser()" value="Submit">
+    <input type="submit" (click)="updateUser()" value="change">
+    <input type="submit" (click)="deleteUser()" value="delete">
+  </form>
+
+<!-- <table>
+    <thead> 
+        <tr>
+        <th>id</th>
+        <th>EmpName</th>
+        <th>empAddress</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{value[0].id}}</td>
+            <td>{{value[0].EmpName}}</td>
+            <td>{{value[0].empAddress}}</td>
+        </tr>
+    </tbody>
+</table> -->

@@ -1,0 +1,12 @@
+<p>Employee Details</p>
+<!-- <ul *ngFor="let e of services" (click)="view(e.id)">
+    <li>{{e.id}}</li>
+    <li>{{e.EmpName}}</li>
+    <li>{{e.empAddress}}</li>
+
+</ul> -->
+<ul>
+    <h4>Employee ID</h4>
+    <li (click)="view(e.id)" style="cursor:grab;" *ngFor="let e of services">{{e.id}}.{{e.EmpName}} </li>
+</ul>
+
